@@ -47,13 +47,17 @@ class Solution
   # Implement the following methods in the Solution class.
   def analyze_file() # processes 'test.txt' intro an array of LineAnalyzers and stores them in analyzers.
 		line_no = 0
+		analyzers = []
 		File.foreach('test.txt') do |line|
 			line_no += 1
 			analyzers.push LineAnalyzer.new(line, line_no)
+			p analyzers
 		end
 	end
   def calculate_line_with_highest_frequency() # determines the highest_count_across_lines and highest_count_words_across_lines attribute values
-  	
+  	analyzers.each do |obj|
+			# pending 
+		end
 	end
 	def print_highest_word_frequency_across_lines() # prints the values of LineAnalyzer objects in highest_count_words_across_lines in the specified format
 		
