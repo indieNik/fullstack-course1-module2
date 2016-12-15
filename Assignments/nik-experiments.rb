@@ -49,12 +49,12 @@
 
 class Person
 	attr_accessor :name
-	attr_reader :age
+	attr_accessor :age
 
 	def initialize (name, ageVar)
 		@name = name
 #		self.age = ageVar
-		@age = age unless age > 100
+		@age = ageVar unless ageVar > 100
 		p age
 	end
 #	def age= age
